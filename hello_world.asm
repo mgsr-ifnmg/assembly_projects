@@ -1,9 +1,9 @@
-bits 64							; 64 bits assembly
+bits 64						; 64 bits assembly
 
 section .data					; section of data
 
-msg:							; address to store a block of data
-	db 'hello, world!', 0xa		; generate data into msg address
+msg:						; address to store a block of data
+	db 'hello, world!', 0xa			; generate data into msg address
 
 section .text					; section of text -> instructions
 
@@ -17,4 +17,4 @@ _start:							; the execution start here
 
 	mov rax, 0x3c				; write 60 into rax -> the id of exit syscall (linux)
 	xor rdi, rdi				; perform a xor bit-to-bit operation into rdi with itself
-	syscall						; call exit(rdi)	
+	syscall					; call exit(rdi)	
